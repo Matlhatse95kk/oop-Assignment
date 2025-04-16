@@ -1,5 +1,5 @@
 class Vehicle:
-    def move(self):
+    def move(lucky):
         pass
 
 class Car(Vehicle):

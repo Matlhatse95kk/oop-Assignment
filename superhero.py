@@ -1,8 +1,9 @@
 class Superhero:
-    def _init_(self, name, power, secret_identity):
-        self.name = name
-        self.power = power
-        self._secret_identity = secret_identity  # Encapsulated attribute
+    def __init__(self, lucky, spit_fire, docter):
+        self.name = lucky
+        self.power = spit_fire
+        self._secret_identity = docter  # Encapsulated attribute
+    
 
     def use_power(self):
         return f"{self.name} uses {self.power}!"
@@ -11,12 +12,12 @@ class Superhero:
         return f"My secret identity is {self._secret_identity}."
 
 class Villain(Superhero):
-    def _init_(self, name, power, secret_identity, evil_scheme):
-        super()._init_(name, power, secret_identity)
-        self.evil_scheme = evil_scheme
+    def __init__(self, zues, lightning, nurse, steal_medication):
+        super().__init__(zues, lightning, nurse)
+        self.evil_scheme = steal_medication
 
     def use_power(self):  # Override for polymorphism
-        return f"{self.name} uses {self.power} to {self.evil_scheme}!"
+        return f"{self.name} uses {self.power} to execute {self.evil_scheme}!"
 
 # Example usage:
 hero = Superhero("Spider-Man", "web-slinging", "Peter Parker")
